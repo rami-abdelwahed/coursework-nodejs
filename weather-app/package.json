@@ -1,0 +1,15 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A simple app to get the weather for a given address.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rami Abdelwahed",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.79.0",
+    "yargs": "^6.6.0"
+  }
+}
