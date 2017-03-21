@@ -13,7 +13,7 @@ var getTemperature = function (latitude, longitude) {
                 reject('Unable to connect to forcast servers.')
             } else if (response.statusCode === 200) {
                 resolve({
-                    temperature: body.currently.temperature,
+                    temperature: (body.currently.temperature - 32) * 5/9,
                     summary: body.currently.summary
                 });
             } else {
