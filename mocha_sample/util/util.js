@@ -1,6 +1,14 @@
 var add = (a, b) => a + b;
 
-var square = (x, callback) => {
+var asyncAdd = (a, b, callback) => {
+    setTimeout(() => {
+        callback(a + b);
+    }, 1000);
+}
+
+var square = (a) => a * a; 
+
+var asyncSquare = (x, callback) => {
     setTimeout(() => {
         callback(x * x);
     }, 1000);
@@ -14,6 +22,8 @@ var updateUser = (user, fullName) => {
 
 module.exports = {
     add,
+    asyncAdd,
     square,
+    asyncSquare,
     updateUser
 };
