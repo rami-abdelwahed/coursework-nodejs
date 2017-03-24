@@ -1,5 +1,11 @@
 var add = (a, b) => a + b;
 
+var square = (x, callback) => {
+    setTimeout(() => {
+        callback(x * x);
+    }, 1000);
+} 
+
 var updateUser = (user, fullName) => {
     var nameParts =  fullName.split(' ');
     user.firstName = nameParts[0];
@@ -8,5 +14,6 @@ var updateUser = (user, fullName) => {
 
 module.exports = {
     add,
+    square,
     updateUser
 };
